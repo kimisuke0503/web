@@ -2,11 +2,7 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  return (
-    <div>
-      <TodoList />
-    </div>
-  );
+  return <div>Hello cats</div>;
 }
 
 export default App;
