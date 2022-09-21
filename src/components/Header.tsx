@@ -6,8 +6,8 @@ const Header = () => {
       <h2 className="logo">
         <a href="#">Kimisuke Web</a>
       </h2>
-      <nav className="main-nav">
-        <ul>
+      <nav>
+        <ul className="main-nav">
           <li>
             <a href="#">Profile</a>
           </li>
