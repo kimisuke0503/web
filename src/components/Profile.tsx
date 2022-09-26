@@ -1,32 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 import kimisukeimg from "../images/kimi.png";
 import instaIcon from "../images/insta-icon.png";
 import twitterIcon from "../images/twitter-icon.png";
 import githubIcon from "../images/github-icon.png";
+import { linkInstagram, linkTwitter, linkGithub } from "./externalLink";
 
 const Profile = () => {
   return (
     <main>
-      <img id="kimisukeimg" src={kimisukeimg} alt="kimi" />
       <article className="profile">
+        <img id="kimisukeimg" src={kimisukeimg} alt="kimi" />
         <div className="introduction">
           <h1>Kimisuke</h1>
           <h2>Graduate Student</h2>
           <div className="sns-icon">
-            <Link
-              className="icon-link"
-              to="https://www.instagram.com/hondana_moriken/"
-            >
+            <div className="icon-link" onClick={linkInstagram}>
               <img src={instaIcon} alt="Instagram" />
-            </Link>
-            <Link className="icon-link" to="https://twitter.com/Yrkk17">
+            </div>
+            <div className="icon-link" onClick={linkTwitter}>
               <img src={twitterIcon} alt="Twitter" />
-            </Link>
-            <Link className="icon-link" to="https://github.com/kimisuke0503">
+            </div>
+            <div className="icon-link" onClick={linkGithub}>
               <img src={githubIcon} alt="GitHub" />
-            </Link>
+            </div>
           </div>
           <p>
             kimisukeです(愛猫の名前を拝借しました)。大学院で暇を持て余しております。猫と映画と伊坂幸太郎が好きです。
@@ -37,7 +33,7 @@ const Profile = () => {
           </p>
         </div>
         <div className="history">
-          <h3 className="profile-title">history</h3>
+          <h3 className="profile-title">History</h3>
           <ul>
             <li className="history-content">
               <div>
@@ -72,7 +68,7 @@ const Profile = () => {
           </ul>
         </div>
         <div className="interest">
-          <h3 className="profile-title">interest</h3>
+          <h3 className="profile-title">Interest</h3>
           <p>Javascript/Typescript/React/猫/伊坂幸太郎/映画/就活</p>
         </div>
         <div className="akademic-paper">
