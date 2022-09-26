@@ -1,6 +1,14 @@
-.App {
+* {
     font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
     color: #432;
+
+    text-decoration: none;
+    list-style-type: none;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 .full-img {
     position: absolute;
@@ -8,7 +16,7 @@
     width: 100%;
     height: 350px;
 
-    background-image: url(../images/headbg.JPG);
+    background-image: url(images/headbg.JPG);
     background-position: center center;
     background-size: cover;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -27,13 +35,7 @@ header {
 
     transition: all .4s;
 }
-a {
-    text-decoration: none;
-}
-ul {
-    list-style-type: none
-}
-.logo a {
+.logo {
     color: #fff;
 }
 .main-nav {
@@ -44,7 +46,7 @@ ul {
 
     text-transform: uppercase;
 }
-.main-nav a {
+.main-nav-menu  {
     width: 120%;
     height: 120%;
     color: #fff;
@@ -56,4 +58,81 @@ ul {
 }
 .main-nav a:hover {
     background-color: rgba(0,0,0,0.3);
+}
+
+#kimisukeimg {
+    /* kimisukeの写真の位置 */
+    position: absolute;
+    top: 260px;
+    transform: translateX(-50%);
+
+    /* kimisukeの写真の位置 */
+    width: 170px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+}
+
+article {
+    height: auto;
+    width: 95%;
+
+    background-color: #fff;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+    margin: 310px auto 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 135px 0 20px;    
+}
+article h1{
+    color: #b07f72;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+}
+.introduction h2 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.3rem;
+}
+.sns-icon {
+    display: flex;
+    justify-content: center; /*左右中心化*/
+
+    margin: 10px 0 10px;
+}
+.icon-link {
+    width: 5vh;
+    height: 5vh;
+    
+    border-radius: 50%;
+    margin: 0 7px;
+
+    display: flex;
+    justify-content: center; /*左右中心化*/
+    align-items: center; /*上下中心化*/
+}
+.sns-icon img{
+    width: 4vh;
+    height: auto;
+}
+.sns-icon a:hover {
+    background-color: #ddd;
+}
+
+
+footer {
+    margin-top: auto;
+
+    width: 100%;
+    padding: 0 5%;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 3% 2%;
+}
+
+footer p {
+    font-size: 1rem;
 }
