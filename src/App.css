@@ -1,5 +1,6 @@
 * {
     font-size: 100%;
+    line-height: 1.7;
     font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
     color: #432;
 
@@ -50,6 +51,7 @@ header {
 }
 .main-nav-menu  {
     font-size: 1rem;
+    font-weight: 500;
     width: 120%;
     height: 120%;
     color: #fff;
@@ -169,9 +171,12 @@ footer p {
     font-size: 1rem;
 }
 
-.link-p:hover {
-    cursor: pointer;
-    border-bottom: 1px #432 solid;
+.not-found {
+    margin-top: 300px;
+    text-align: center;
+
+    font-size: larger;
+    font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 /* --------------------blog/note共通部分-------------------- */
@@ -186,7 +191,7 @@ footer p {
     justify-content: center; /*左右中心化*/
     align-items: center; /*上下中心化*/
 }
-.item a{
+.item-link {
     width: 100%;
     height: auto;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
@@ -194,15 +199,15 @@ footer p {
     padding: 5%;
     transition: all 0.2s;
 }
-.item a:hover {
+.item-link:hover {
     box-shadow: 0px 7px 13px 5px rgba(0,0,0,0.3);
 }
-.item p {
+.item-link p {
     color: #432;
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 1.3rem;
 }
-.item img {
+.item-link img {
     width: 100%;
     height: auto;
 }
