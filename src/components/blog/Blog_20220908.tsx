@@ -1,5 +1,7 @@
 import React from "react";
 import img20220909 from "../../images/blog/screenshot20220909.png";
+import { linkWakabaAmazon } from "../externalLink";
+import { linkHTMLCSSAmazon } from "../externalLink";
 
 const Blog_20220908 = () => {
   return (
@@ -88,19 +90,21 @@ const Blog_20220908 = () => {
         </p>
         <ul>
           <li>
-            <a href="https://www.amazon.co.jp/%E6%94%B9%E8%A8%822%E7%89%88-%E3%82%8F%E3%81%8B%E3%81%B0%E3%81%A1%E3%82%83%E3%82%93%E3%81%A8%E5%AD%A6%E3%81%B6-Git%E4%BD%BF%E3%81%84%E6%96%B9%E5%85%A5%E9%96%80-%E6%B9%8A%E5%B7%9D%E3%81%82%E3%81%84-ebook/dp/B096TH798S">
-              改訂2版 わかばちゃんと学ぶ Git使い方入門
-            </a>
-            :
-            結構有名なやつですね。GitHub超初心者でしたがこれ読んでちょっと理解できました。ただ、書籍内ではsourcetree(Gitを使うためのwebアプリ)を使って話が進んでいきますが、書かれた時と現在では認証の仕方が変わったらしく、うまくいかなかったので、gitの説明は本で理解して、使うのは上述のvscodeでやりました。(Git
-            Graphっていう拡張機能が見やすくて良かったです)
+            <span className="link" onClick={linkWakabaAmazon}>
+              改訂2版 わかばちゃんと学ぶ Git使い方入門：
+            </span>
+            <p>
+              結構有名なやつですね。GitHub超初心者でしたがこれ読んでちょっと理解できました。ただ、書籍内ではsourcetree(Gitを使うためのwebアプリ)を使って話が進んでいきますが、書かれた時と現在では認証の仕方が変わったらしく、うまくいかなかったので、gitの説明は本で理解して、使うのは上述のvscodeでやりました。(Git
+              Graphっていう拡張機能が見やすくて良かったです)
+            </p>
           </li>
           <li>
-            <a href="https://www.amazon.co.jp/%E3%80%90Amazon-co-jp-%E9%99%90%E5%AE%9A%E3%80%911%E5%86%8A%E3%81%A7%E3%81%99%E3%81%B9%E3%81%A6%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%8FHTML-CSS%E3%81%A8Web%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E5%85%A5%E9%96%80%E8%AC%9B%E5%BA%A7-DL%E7%89%B9%E5%85%B8-Flexbox/dp/4797398892/ref=asc_df_4797398892/?tag=jpgo-22&linkCode=df0&hvadid=295723231663&hvpos=&hvnetw=g&hvrand=4608222897434405963&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1009541&hvtargid=pla-637663128882&psc=1&th=1&psc=1">
-              1冊ですべて身につくHTML & CSSとWebデザイン入門講座
-            </a>
-            :
-            これで基礎的な部分は理解できました。実際に書きながら学べたので良かったです。本屋さんでたくさんあるHTML&CSSの本の中から、一際輝いていたので選びました。(本当は著者のManaさんが可愛かったので。迷った時は心躍る方へ！)
+            <span className="link" onClick={linkHTMLCSSAmazon}>
+              1冊ですべて身につくHTML & CSSとWebデザイン入門講座:
+            </span>
+            <p>
+              これで基礎的な部分は理解できました。実際に書きながら学べたので良かったです。本屋さんでたくさんあるHTML&CSSの本の中から、一際輝いていたので選びました。(本当は著者のManaさんが可愛かったので。迷った時は心躍る方へ！)
+            </p>
           </li>
         </ul>
         <p>

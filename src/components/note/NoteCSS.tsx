@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Prism from "prismjs";
-import { LinkCSS_1 } from "../externalLink";
+import { linkCSS_1 } from "../externalLink";
 
 const NoteCSS = () => {
   useEffect(() => {
@@ -94,7 +94,7 @@ const NoteCSS = () => {
         </p>
         <p>
           参考 :{" "}
-          <span className="link" onClick={LinkCSS_1}>
+          <span className="link" onClick={linkCSS_1}>
             CSSでたまに見かける、-webkit-って何だろう...？(Zenn)
           </span>
         </p>

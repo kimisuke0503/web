@@ -14,7 +14,7 @@ import NotFound from "./components/NotFound";
 import NoteFunctionHome from "./components/note/noteFunction/NoteFunctionHome";
 import NoteCSS from "./components/note/NoteCSS";
 import NoteFunctionHamberger from "./components/note/noteFunction/NoteFunctionHamberger";
-import Blog_20220908 from "./components/blog/Blog_20220908";
+import Blog20220908 from "./components/blog/Blog_20220908";
 
 const App = () => {
   return (
@@ -33,7 +33,7 @@ const App = () => {
           />
 
           <Route path={"/web/blog"} element={<BlogHome />} />
-          <Route path={"/web/blog/20220908"} element={<Blog_20220908 />} />
+          <Route path={"/web/blog/20220908"} element={<Blog20220908 />} />
 
           <Route path={"*"} element={<NotFound />} />
         </Routes>
