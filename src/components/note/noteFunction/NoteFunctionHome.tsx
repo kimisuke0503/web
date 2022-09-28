@@ -1,5 +1,5 @@
 import React from "react";
-import hambergerImg from "../../images/note/hamberger.png";
+import hambergerImg from "../../../images/note/hamberger.png";
 import { Link } from "react-router-dom";
 
 const NoteFunctionHome = () => {
@@ -9,7 +9,7 @@ const NoteFunctionHome = () => {
         <h1>Note</h1>
         <div className="wrapper grid">
           <div className="item">
-            <Link className="item-link" to="note_20220910.html">
+            <Link className="item-link" to="/web/note/function/hamberger">
               <p>
                 ハンバーガーメニューを作った。
                 <br />

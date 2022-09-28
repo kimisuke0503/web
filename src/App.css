@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
     font-size: 100%;
     line-height: 1.7;
@@ -88,7 +90,7 @@ article {
 article h1{
     color: #b07f72;
     font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 .introduction h2 {
     font-family: "M PLUS Rounded 1c", sans-serif;
@@ -210,4 +212,52 @@ footer p {
 .item-link img {
     width: 100%;
     height: auto;
+}
+
+/* blog/note記事部分 */
+.blog-note-content * {
+    text-align: left;
+    font-family: "M PLUS Rounded 1c", sans-serif
+}
+.blog-note-content li {
+    list-style: inside;
+}
+.blog-note-content h2 {
+    margin-top: 30px;
+    font-size: 1.7rem;
+}
+.blog-note-content h3 {
+    margin-top: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.blog-note-content ul,
+.blog-note-content ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.blog-note-content .link {
+    text-decoration: underline;
+}
+.blog-note-content .link:hover {
+    cursor: pointer;
+}
+
+/* 画像たち */
+/* blog_2022/09/08 */
+.img-20220908 {
+    width: 100%;
+    height: auto;
+}
+
+/* note_2022/09/10 */
+.img-20220910-wrapper {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, minmax(10vh, 40vh));
+}
+.img-20220910-wrapper img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }

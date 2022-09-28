@@ -9,3 +9,7 @@ export const linkTwitter = () => {
 export const linkGithub = () => {
   window.open("https://github.com/kimisuke0503", "_blank");
 };
+
+export const LinkCSS_1 = () => {
+  window.open("https://zenn.dev/azunasu/articles/581153b9ec1f92", "_blank");
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import pcUserImg from "../../images/blog/pc.png";
 
 const BlogHome = () => {
@@ -8,14 +9,14 @@ const BlogHome = () => {
         <h1>Blog</h1>
         <div className="wrapper grid">
           <div className="item">
-            <a href="blog_20220908.html">
+            <Link className="item-link" to="/web/blog/20220908">
               <p>
                 個人サイトを作りました。
                 <br />
                 2022/09/08
               </p>
               <img src={pcUserImg} alt="pcUserImg"></img>
-            </a>
+            </Link>
           </div>
         </div>
       </article>
