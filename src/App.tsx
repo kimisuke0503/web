@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // CSS
 import "./App.css";
 import "./prism.css";
+import "./components/common/Hamberger.css";
 // 各コンポーネント
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
@@ -18,7 +19,7 @@ import Blog20220908 from "./components/blog/Blog_20220908";
 
 const App = () => {
   return (
-    <div className="full-img">
+    <div className="full-img wrapper">
       <BrowserRouter>
         <Header />
         <Routes>
