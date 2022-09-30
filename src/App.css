@@ -23,7 +23,6 @@
 /* ヘッダー */
 header {
     position: fixed;
-    z-index: 9;
     width: 90%;
     height: 60px;
     border-radius: 20px;
@@ -45,26 +44,12 @@ header {
     color: #432;
 }
 .main-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-
-    text-transform: uppercase;
-}
-.main-nav-menu  {
-    font-size: 1rem;
-    width: 120%;
-    height: auto;
-    color: #432;
-    border-radius: 7px;
-    
     display: flex;
-    justify-content: center; /*左右中心化*/
-    align-items: center; /*上下中心化*/
 }
-.main-nav-menu:hover {
-    background-color: #ddd;
+.main-nav li {
+    margin-right: 20px;
 }
+
 
 #kimisukeimg {
     /* kimisukeの写真の位置 */
