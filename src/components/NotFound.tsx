@@ -2,13 +2,10 @@ import React from "react";
 
 const NotFound = () => {
   return (
-    <>
-      <div className="not-found">
-        404
-        <br />
-        お探しのページは見つかりませんでした。
-      </div>
-    </>
+    <main>
+      <h1>404</h1>
+      <p>お探しのページは見つかりませんでした。</p>
+    </main>
   );
 };
 
