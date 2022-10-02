@@ -4,7 +4,6 @@ import { useMedia } from "react-use";
 import Hamberger from "./Hamberger";
 
 import Button from "@mui/material/Button";
-import styled from "@emotion/styled";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import MusicVideoIcon from "@mui/icons-material/MusicVideo";
@@ -13,10 +12,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const Header = () => {
   const isWide = useMedia("(min-width: 600px)");
-
-  const MenuButton = styled(Button)({
-    backgroundColor: "#aqua",
-  });
 
   const theme = createTheme({
     palette: {
@@ -28,50 +23,55 @@ const Header = () => {
   });
 
   return (
-    <header>
-      <Link to="/web" className="logo">
-        Kimisuke Web
-      </Link>
-      {isWide ? (
-        <ul className="main-nav">
-          <ThemeProvider theme={theme}>
-            <li>
-              <MenuButton
-                size="medium"
-                href="/web"
-                variant={"text"}
-                className="main-nav-menu"
-                startIcon={<AccountBoxIcon />}
-              >
-                Profile
-              </MenuButton>
-            </li>
-            <li>
-              <Button
-                size="medium"
-                href="/web/note"
-                className="main-nav-menu"
-                startIcon={<MenuBookIcon />}
-              >
-                Note
-              </Button>
-            </li>
-            <li>
-              <Button
-                size="medium"
-                href="/web/blog"
-                className="main-nav-menu"
-                startIcon={<MusicVideoIcon />}
-              >
-                Blog
-              </Button>
-            </li>
-          </ThemeProvider>
-        </ul>
-      ) : (
-        <Hamberger />
-      )}
-    </header>
+    <div className="full-img wrapper">
+      <header>
+        <Link to="/web" className="logo">
+          Kimisuke Web
+        </Link>
+        {isWide ? (
+          <ul className="main-nav">
+            <ThemeProvider theme={theme}>
+              <li>
+                <Button
+                  size="medium"
+                  variant={"text"}
+                  className="main-nav-menu"
+                  startIcon={<AccountBoxIcon />}
+                  component={Link}
+                  to="/web"
+                >
+                  Profile
+                </Button>
+              </li>
+              <li>
+                <Button
+                  size="medium"
+                  className="main-nav-menu"
+                  startIcon={<MenuBookIcon />}
+                  component={Link}
+                  to="/web/note"
+                >
+                  Note
+                </Button>
+              </li>
+              <li>
+                <Button
+                  size="medium"
+                  className="main-nav-menu"
+                  startIcon={<MusicVideoIcon />}
+                  component={Link}
+                  to="/web/blog"
+                >
+                  Blog
+                </Button>
+              </li>
+            </ThemeProvider>
+          </ul>
+        ) : (
+          <Hamberger />
+        )}
+      </header>
+    </div>
   );
 };
 
