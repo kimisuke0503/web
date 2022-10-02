@@ -21,6 +21,7 @@
 }
 /* ヘッダー */
 header {
+    z-index: 99;
     position: fixed;
     width: 90%;
     height: 60px;
@@ -42,12 +43,40 @@ header {
     font-weight: bold;
     color: #432;
 }
-.main-nav {
+
+.sub-menu {
+    position: fixed; /* 位置を固定 */
+    top: 0;
+    right: -60%; /* ボタンが押されるまで隠す(position: fixed;との連携) */
+    width: 60%; /* 出てくるメニューの幅を調整 */
+    height: 100vh; /* 縦の長さは画面一杯に */
+
+    padding-top: 30px;
+    padding-left: 10px;
+
+    background: rgba(255,255,255,.9);
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+    transition: ease 0.4s; /* ハンバーガーメニュークリック時のメニューの動きを遅延 */
+}
+.sub-menu.active {
+    right: 0; /* ボタンが押されると位置を変えて出てくるようにする */
+}
+.overlay{ /*　画面全体を覆う設定　*/
+    z-index: -1;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+
+    /*　画面の中央に要素を表示させる設定　*/
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
-.main-nav li {
-    margin-right: 20px;
-}
+
 
 
 #kimisukeimg {
@@ -79,31 +108,6 @@ article h1{
 .introduction h2 {
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 1.3rem;
-}
-.sns-icon {
-    display: flex;
-    justify-content: center; /*左右中心化*/
-
-    margin: 10px 0 10px;
-}
-.icon-link {
-    width: 5vh;
-    height: 5vh;
-    
-    border-radius: 50%;
-    margin: 0 7px;
-
-    display: flex;
-    justify-content: center; /*左右中心化*/
-    align-items: center; /*上下中心化*/
-}
-.icon-link:hover {
-    cursor: pointer;
-    background-color: #ddd;
-}
-.sns-icon img{
-    width: 4vh;
-    height: auto;
 }
 
 /* history以下共通部分 */

@@ -1,14 +1,19 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMedia } from "react-use";
-import Hamberger from "./Hamberger";
 
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import { Stack } from "@mui/material";
+
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import MusicVideoIcon from "@mui/icons-material/MusicVideo";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+import Modal from "./Modal";
 
 const Header = () => {
   const isWide = useMedia("(min-width: 600px)");
@@ -16,11 +21,15 @@ const Header = () => {
   const theme = createTheme({
     palette: {
       primary: {
-        // Purple and green play nicely together.
         main: "#432",
       },
     },
   });
+
+  const [show, setShow] = useState<boolean>(false);
+  const toggleModal = () => {
+    setShow(!show);
+  };
 
   return (
     <div className="full-img wrapper">
@@ -29,46 +38,86 @@ const Header = () => {
           Kimisuke Web
         </Link>
         {isWide ? (
-          <ul className="main-nav">
+          <div className="main-menu">
             <ThemeProvider theme={theme}>
-              <li>
+              <Stack direction="row" spacing={2}>
                 <Button
                   size="medium"
                   variant={"text"}
-                  className="main-nav-menu"
                   startIcon={<AccountBoxIcon />}
                   component={Link}
                   to="/web"
                 >
                   Profile
                 </Button>
-              </li>
-              <li>
                 <Button
                   size="medium"
-                  className="main-nav-menu"
+                  variant={"text"}
                   startIcon={<MenuBookIcon />}
                   component={Link}
                   to="/web/note"
                 >
                   Note
                 </Button>
-              </li>
-              <li>
                 <Button
                   size="medium"
-                  className="main-nav-menu"
+                  variant={"text"}
                   startIcon={<MusicVideoIcon />}
                   component={Link}
                   to="/web/blog"
                 >
                   Blog
                 </Button>
-              </li>
+              </Stack>
             </ThemeProvider>
-          </ul>
+          </div>
         ) : (
-          <Hamberger />
+          <>
+            <Modal show={show} setShow={setShow} />
+            <IconButton color="primary" onClick={toggleModal}>
+              <MenuIcon />
+            </IconButton>
+            <div className={`sub-menu ${show ? "active" : ""}`}>
+              <ThemeProvider theme={theme}>
+                <Stack
+                  spacing={2}
+                  alignItems={"flex-start"}
+                  justifyContent="space-between"
+                >
+                  <Button
+                    size="medium"
+                    variant={"text"}
+                    startIcon={<AccountBoxIcon />}
+                    component={Link}
+                    to="/web"
+                    onClick={toggleModal}
+                  >
+                    Profile
+                  </Button>
+                  <Button
+                    size="medium"
+                    variant={"text"}
+                    startIcon={<MenuBookIcon />}
+                    component={Link}
+                    to="/web/note"
+                    onClick={toggleModal}
+                  >
+                    Note
+                  </Button>
+                  <Button
+                    size="medium"
+                    variant={"text"}
+                    startIcon={<MusicVideoIcon />}
+                    component={Link}
+                    to="/web/blog"
+                    onClick={toggleModal}
+                  >
+                    Blog
+                  </Button>
+                </Stack>
+              </ThemeProvider>
+            </div>
+          </>
         )}
       </header>
     </div>

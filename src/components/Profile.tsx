@@ -1,9 +1,11 @@
 import React from "react";
 
 import kimisukeimg from "../images/kimi.png";
-import instaIcon from "../images/insta-icon.png";
-import twitterIcon from "../images/twitter-icon.png";
-import githubIcon from "../images/github-icon.png";
+import { IconButton } from "@mui/material";
+
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 import { linkInstagram, linkTwitter, linkGithub } from "./externalLink";
 
@@ -14,17 +16,15 @@ const Profile = () => {
       <div className="introduction">
         <h1>Kimisuke</h1>
         <h2>Graduate Student</h2>
-        <div className="sns-icon">
-          <div className="icon-link" onClick={linkInstagram}>
-            <img src={instaIcon} alt="Instagram" />
-          </div>
-          <div className="icon-link" onClick={linkTwitter}>
-            <img src={twitterIcon} alt="Twitter" />
-          </div>
-          <div className="icon-link" onClick={linkGithub}>
-            <img src={githubIcon} alt="GitHub" />
-          </div>
-        </div>
+        <IconButton onClick={linkInstagram}>
+          <InstagramIcon />
+        </IconButton>
+        <IconButton onClick={linkTwitter}>
+          <TwitterIcon />
+        </IconButton>
+        <IconButton onClick={linkGithub}>
+          <GitHubIcon />
+        </IconButton>
         <p>
           kimisukeです(愛猫の名前を拝借しました)。大学院で暇を持て余しております。猫と映画と伊坂幸太郎が好きです。
           <br />
