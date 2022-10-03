@@ -2,35 +2,35 @@ import React, { useEffect } from "react";
 import Prism from "prismjs";
 import { linkCSS_1 } from "../externalLink";
 
-const NoteCSS = () => {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-
-  const cssCode1 = `
+const cssCode1 = `
   ul li:nth-child("数値"or"2n"or"2n+1"or"odd"or"even"or...) {
     background-color: ---;
 }
 `.trim();
 
-  const cssCode2 = `
+const cssCode2 = `
   .wrapper {
     text-align: center;
 }
 `.trim();
 
-  const cssCode3 = `
+const cssCode3 = `
   .wrapper {
     display: flex;
     justify-content: center; /*左右中心化(水平方向)*/
     align-items: center; /*上下中心化(垂直方向)*/
 }
 `.trim();
-  const cssCode4 = `
+const cssCode4 = `
   .img {
     transform: translate(-50%, -50%); /* その都度調整が必要 */
 }
 `.trim();
+
+const NoteCSS = () => {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
     <main className="blog-note-content">
@@ -60,7 +60,6 @@ const NoteCSS = () => {
       <p>
         &lt;li&gt;など連続するタグに対して、&lt;ul&gt;など親要素から見た順番や奇数偶数番目などを指定できる。
       </p>
-      <div>例 : CSS</div>
       <pre className="line-numbers">
         <code className="language-css">{cssCode1}</code>
       </pre>
