@@ -5,11 +5,9 @@ const Modal = (props: { show: boolean; setShow: (show: boolean) => void }) => {
     props.setShow(!props.show);
   };
 
-  if (props.show) {
-    return <div className="overlay" onClick={toggleModal}></div>;
-  } else {
-    return null;
-  }
+  return props.show ? (
+    <div className="overlay" onClick={toggleModal}></div>
+  ) : null;
 };
 
 export default Modal;

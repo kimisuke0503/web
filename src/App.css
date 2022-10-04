@@ -33,10 +33,13 @@ header {
 
     margin: 1% 5% 0;
     padding: 0 5%;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
 
     background-color: #fff;
-    transition: all .4s;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    transition: ease .4s;
+}
+header.hidden {
+    transform: translate(0, -100%);
 }
 .logo{
     font-size: 1.25rem;
@@ -47,7 +50,7 @@ header {
 .sub-menu {
     position: fixed; /* 位置を固定 */
     top: 0;
-    right: -60%; /* ボタンが押されるまで隠す(position: fixed;との連携) */
+    right: -80%; /* ボタンが押されるまで隠す(position: fixed;との連携) */
     width: 60%; /* 出てくるメニューの幅を調整 */
     height: 100vh; /* 縦の長さは画面一杯に */
 
@@ -76,8 +79,6 @@ header {
     justify-content: center;
 
 }
-
-
 
 #kimisukeimg {
     /* kimisukeの写真の位置 */

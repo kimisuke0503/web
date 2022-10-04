@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMedia } from "react-use";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
@@ -16,6 +17,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Modal from "./Modal";
 
 const Header = () => {
+  const [showHeader, setShowHeader] = useState<boolean>(true);
+  useScrollPosition(({ prevPos, currPos }) => {
+    const visible: boolean = currPos.y > prevPos.y;
+    setShowHeader(visible);
+  }, []);
+
   const isWide = useMedia("(min-width: 600px)");
 
   const theme = createTheme({
@@ -33,7 +40,7 @@ const Header = () => {
 
   return (
     <div className="full-img wrapper">
-      <header>
+      <header className={showHeader ? "" : "hidden"}>
         <Link to="/web" className="logo">
           Kimisuke Web
         </Link>
