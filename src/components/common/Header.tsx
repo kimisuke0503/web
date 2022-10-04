@@ -17,14 +17,17 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Modal from "./Modal";
 
 const Header = () => {
+  // スクロール制御
   const [showHeader, setShowHeader] = useState<boolean>(true);
   useScrollPosition(({ prevPos, currPos }) => {
     const visible: boolean = currPos.y > prevPos.y;
     setShowHeader(visible);
   }, []);
 
+  // 画面の広さ制御
   const isWide = useMedia("(min-width: 600px)");
 
+  // ボタンの色変更
   const theme = createTheme({
     palette: {
       primary: {
@@ -33,6 +36,7 @@ const Header = () => {
     },
   });
 
+  // モーダル制御
   const [show, setShow] = useState<boolean>(false);
   const toggleModal = () => {
     setShow(!show);
