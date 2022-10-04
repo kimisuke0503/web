@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Prism from "prismjs";
 import { linkCSS_1 } from "../externalLink";
 
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
 const cssCode1 = `
   ul li:nth-child("数値"or"2n"or"2n+1"or"odd"or"even"or...) {
     background-color: ---;
@@ -35,8 +37,20 @@ const NoteCSS = () => {
   return (
     <main className="blog-note-content">
       <h1>CSSのメモ</h1>
+      <div>
+        リンク集：プロパティ(
+        <AnchorLink href="#position">position, </AnchorLink>
+        ), <AnchorLink href="#gizikurasu">擬似クラス</AnchorLink>,{" "}
+        <AnchorLink href="#yousowomannakanihaitisuruhouhouiroiro">
+          要素を真ん中に配置する方法いろいろ
+        </AnchorLink>
+        ,{" "}
+        <AnchorLink href="#benda-purehulikkusu">
+          ベンダープレフィックス
+        </AnchorLink>
+      </div>
       <h2>プロパティ</h2>
-      <h3>position</h3>
+      <h3 id="position">position</h3>
       <p>ボックスの左上点から見た位置を指定する。値によって起点が変わる。</p>
       <ul>
         <li>static : デフォルト。HTMLのまんまの位置。</li>
@@ -54,7 +68,7 @@ const NoteCSS = () => {
         </li>
       </ul>
 
-      <h2>擬似クラス</h2>
+      <h2 id="gizikurasu">擬似クラス</h2>
       <p>クラス付与してないけどクラスっぽく書けるから"擬似"クラス。</p>
       <h3>nth-child</h3>
       <p>
@@ -64,7 +78,9 @@ const NoteCSS = () => {
         <code className="language-css">{cssCode1}</code>
       </pre>
 
-      <h2>要素を真ん中に配置する方法いろいろ</h2>
+      <h2 id="yousowomannakanihaitisuruhouhouiroiro">
+        要素を真ん中に配置する方法いろいろ
+      </h2>
       <h3>wrapperから指定する</h3>
       <ul>
         <li>text-alignで(文字列とか要素が一つの時)</li>
@@ -86,7 +102,7 @@ const NoteCSS = () => {
         <code className="language-css">{cssCode4}</code>
       </pre>
 
-      <h2>ベンダープレフィックス</h2>
+      <h2 id="benda-purehulikkusu">ベンダープレフィックス</h2>
       <p>
         -webkit-(webkitはsafariなんかのレンダリングエンジン)などと書き、標準化されていない拡張機能なんかを使えるようにするらしい。あんまりよくわかってないが、高度なことやらない限りは必要ないかも？
       </p>

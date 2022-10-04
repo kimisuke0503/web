@@ -139,12 +139,8 @@ const NoteFunctionHamberger = () => {
         実装したのは下の画像の囲っている部分の3本線のアイコン(ハンバーガーみたいだからハンバーガーメニューというらしい)で、クリックorタップすると右の方からにゅっとメニューが出てきます。
       </p>
       <div className="img-20220910-wrapper">
-        <div className="item">
-          <img src={img20220910_1} alt="スマホのスクショ"></img>
-        </div>
-        <div className="item">
-          <img src={img20220910_2} alt="スマホのスクショ"></img>
-        </div>
+        <img src={img20220910_1} alt="スマホのスクショ"></img>
+        <img src={img20220910_2} alt="スマホのスクショ"></img>
       </div>
       <h2>機能の詳細</h2>
       <p>

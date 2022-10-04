@@ -17,11 +17,20 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Modal from "./Modal";
 
 const Header = () => {
-  // スクロール制御
+  // スクロール位置取得
+  const scrollTop = (): number => {
+    return Math.max(
+      window.pageYOffset,
+      document.documentElement.scrollTop,
+      document.body.scrollTop
+    );
+  };
+
+  // スクロールによるヘッダーの制御
   const [showHeader, setShowHeader] = useState<boolean>(true);
   useScrollPosition(({ prevPos, currPos }) => {
     const visible: boolean = currPos.y > prevPos.y;
-    setShowHeader(visible);
+    if (scrollTop() > 170) setShowHeader(visible);
   }, []);
 
   // 画面の広さ制御

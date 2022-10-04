@@ -20,6 +20,7 @@
     "framer-motion": "^7.5.1",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
@@ -55,6 +56,7 @@
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.0",
+    "@types/react-anchor-link-smooth-scroll": "^1.0.2",
     "customize-cra": "^1.0.0",
     "gh-pages": "^4.0.0",
     "react-app-rewired": "^2.2.1"
