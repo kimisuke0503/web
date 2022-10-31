@@ -26,7 +26,7 @@ import {
 const Profile = () => {
   return (
     <>
-      <Box textAlign="center" sx={{ padding: "0 50px 0" }}>
+      <Box textAlign="center" sx={{ padding: "0 20px 0" }}>
         <Box
           mt={-6}
           component="img"

@@ -1,13 +1,15 @@
 import React from "react";
+import { Grid } from "@mui/material";
 
 const Footer = () => {
   return (
-    <footer>
-      <div>
-        <p>Kimisuke Web</p>
-        <p>&copy; 2022, Kimisuke</p>
-      </div>
-    </footer>
+    <Grid
+      container
+      sx={{ justifyContent: "space-between", padding: "20px 5% 0" }}
+    >
+      <Grid item>Kimisuke Web</Grid>
+      <Grid item>&copy; 2022, Kimisuke</Grid>
+    </Grid>
   );
 };
 
