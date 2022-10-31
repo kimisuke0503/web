@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Prism from "prismjs";
-import { linkCSS_1 } from "../externalLink";
+import { linkCSS_1 } from "../../components/ExternalLinks";
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
 

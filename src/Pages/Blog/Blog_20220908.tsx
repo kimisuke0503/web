@@ -1,7 +1,7 @@
 import React from "react";
-import img20220909 from "../../images/blog/screenshot20220909.png";
-import { linkWakabaAmazon } from "../externalLink";
-import { linkHTMLCSSAmazon } from "../externalLink";
+import img20220909 from "../../assets/images/blog/20220909.png";
+import { linkWakabaAmazon } from "../../components/ExternalLinks";
+import { linkHTMLCSSAmazon } from "../../components/ExternalLinks";
 
 const Blog_20220908 = () => {
   return (

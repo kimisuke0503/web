@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import img20221004_1 from "../../../images/note/img20221004_1.png";
-import img20221004_2 from "../../../images/note/img20221004_2.png";
+import img20221004_1 from "../../../assets/images/note/img20221004_1.png";
+import img20221004_2 from "../../../assets/images/note/img20221004_2.png";
 
 import Prism from "prismjs";
 
-import { linkUseMedia } from "../../externalLink";
+import { linkUseMedia } from "../../../components/ExternalLinks";
 
 const tsCode1 = `
 import { useMedia } from "react-use";

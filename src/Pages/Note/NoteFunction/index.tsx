@@ -1,41 +1,41 @@
 import React from "react";
+import hambergerImg from "../../../assets/images/note/hamberger.png";
+import hambergerImg2 from "../../../assets/images/note/hamberger2.png";
 import { Link } from "react-router-dom";
-import pcUserImg from "../../images/blog/pc.png";
-import pcUserImg2 from "../../images/blog/pc2.png";
-
 import { motion } from "framer-motion";
 
-const BlogHome = () => {
+const NoteFunctionHome = () => {
   return (
-    <main className="blog">
-      <h1>Blog</h1>
+    <main className="note">
+      <h1>Note</h1>
       <div className="wrapper grid">
-        <Link to="/web/blog/20221004">
+        <Link to="/web/note/function/hamberger2">
           <motion.button
             className="item"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
             <p>
-              Typescript&Reactで作り直しました。
+              ハンバーガーメニューを作り直した。
               <br />
               2022/10/04
             </p>
-            <img src={pcUserImg2} alt="pcUserImg"></img>
+            <img src={hambergerImg2} alt="hambergerImg2"></img>
           </motion.button>
         </Link>
-        <Link to="/web/blog/20220908">
+
+        <Link to="/web/note/function/hamberger">
           <motion.button
             className="item"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
             <p>
-              個人サイトを作りました。
+              ハンバーガーメニューを作った。
               <br />
-              2022/09/08
+              2022/09/10
             </p>
-            <img src={pcUserImg} alt="pcUserImg"></img>
+            <img src={hambergerImg} alt="hambergerImg"></img>
           </motion.button>
         </Link>
       </div>
@@ -43,4 +43,4 @@ const BlogHome = () => {
   );
 };
 
-export default BlogHome;
+export default NoteFunctionHome;

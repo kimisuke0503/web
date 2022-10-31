@@ -9,16 +9,7 @@
     text-decoration: none;
     list-style-type: none;
 }
-.full-img {
-    z-index: -99;
-    width: 100%;
-    height: 270px;
 
-    background-image: url(images/headbg.JPG);
-    background-position: center center;
-    background-size: cover;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
 /* ヘッダー */
 header {
     z-index: 99;
@@ -78,70 +69,6 @@ header.hidden {
     align-items: center;
     justify-content: center;
 
-}
-
-#kimisukeimg {
-    /* kimisukeの写真の位置 */
-    margin-top: -60px;
-    width: 170px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
-}
-
-article {
-    height: auto;
-    width: 95%;
-
-    background-color: #fff;
-    margin: -20px auto 20px;
-    border-radius: 10px;
-    text-align: center;
-    padding: 20px 5% 20px;
-
-    box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
-}
-article h1{
-    color: #b07f72;
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 3rem;
-}
-.introduction h2 {
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 1.3rem;
-}
-
-/* history以下共通部分 */
-.profile p {
-    margin-bottom: 80px;
-    padding: 0 5%;
-}
-.profile-title {
-    font-size: 2rem;
-    font-weight: normal;
-}
-
-/* history */
-.history ul {
-    margin-bottom: 80px;
-}
-.history li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 550px;
-    margin: 0 auto 2%;
-    padding: 0 1% 0.5%;
-    width: 95%;
-    border-bottom: 1px #ddd solid;
-}
-.history-content .description {
-    flex: auto;
-}
-.interest p,
-.akademic-paper p,
-.certification p {
-    padding: 0 5%;
 }
 
 

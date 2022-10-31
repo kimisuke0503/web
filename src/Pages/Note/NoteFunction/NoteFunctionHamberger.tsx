@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Prism from "prismjs";
 
-import img20220910_1 from "../../../images/note/20220910_1.png";
-import img20220910_2 from "../../../images/note/20220910_2.png";
+import img20220910_1 from "../../../assets/images/note/20220910_1.png";
+import img20220910_2 from "../../../assets/images/note/20220910_2.png";
 
 const NoteFunctionHamberger = () => {
   useEffect(() => {

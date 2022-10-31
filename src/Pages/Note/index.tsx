@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pcUserImg from "../../images/note/addfunction.png";
-import cssImg from "../../images/note/css.png";
-import reactImg from "../../images/note/react.png";
-import endevImg from "../../images/note/endev.png";
+import pcUserImg from "../../assets/images/note/pcUser.png";
+import cssImg from "../../assets/images/note/css.png";
+import reactImg from "../../assets/images/note/react.png";
+import endevImg from "../../assets/images/note/endev.png";
 
 import { motion } from "framer-motion";
 

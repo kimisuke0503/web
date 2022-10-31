@@ -1,6 +1,6 @@
 import React from "react";
 import BuildCircleIcon from "@mui/icons-material/BuildCircle";
-import { linkRiakutoBOOTH } from "../externalLink";
+import { linkRiakutoBOOTH } from "../../components/ExternalLinks";
 
 const Blog_20221004 = () => {
   return (
