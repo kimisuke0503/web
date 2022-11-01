@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import img20221004_1 from "../../../assets/images/note/img20221004_1.png";
 import img20221004_2 from "../../../assets/images/note/img20221004_2.png";
 
-import Prism from "prismjs";
-
 import { linkUseMedia } from "../../../components/ExternalLinks";
+import { Box, Typography, Grid, List, ListItem } from "@mui/material";
+import SyntaxHighLighter from "../../../components/SyntaxHighLighter";
 
 const tsCode1 = `
 import { useMedia } from "react-use";
@@ -60,76 +60,138 @@ const tsCode3 =
 `.trim();
 
 const NoteFunctionHamberger2 = () => {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-
   return (
-    <main className="blog-note-content">
-      <h1>ハンバーガーメニューを作り直した。</h1>
-      <p>
-        HTML&CSSで作っていたハンバーガーメニューをTypescript&Reactで作り直しましたのでメモ。
-        <br />
-        CSSでなんじゃこっちゃ書いていたよりはシンプルになっているし、ちょっと機能も足しました。
-      </p>
-      <h2>概要</h2>
-      <div className="img-20220910-wrapper">
-        <img src={img20221004_1} alt="スマホのスクショ"></img>
-        <img src={img20221004_2} alt="スマホのスクショ"></img>
-      </div>
-      <p>画面を小さくしてデモしてみるとわかりやすいと思います。</p>
-      <h3>機能の詳細</h3>
-      <ul>
-        <li>画面の横幅が600px以下のときにメニューを隠して出てくる</li>
-        <li>
-          クリックorタップするとメニューが出てきて、それ以外の部分は暗くなる
-        </li>
-        <li>
-          暗いところか、いずれかのコンテンツをクリックorタップすると元に戻る
-        </li>
-      </ul>
-      <h3>機能実装の仕組み</h3>
-      <p>ざっと書きます。詳しくはコード参照</p>
-      <ul>
-        <li>
-          <span className="link" onClick={linkUseMedia}>
+    <Box p={3}>
+      <Typography
+        variant="h2"
+        color="primary"
+        fontWeight="medium"
+        sx={{ fontFamily: `"M PLUS Rounded 1c", sans-serif` }}
+      >
+        ハンバーガーメニューを作り直した。
+      </Typography>
+      HTML&CSSで作っていたハンバーガーメニューをTypescript&Reactで作り直しましたのでメモ。
+      <br />
+      CSSでなんじゃこっちゃ書いていたよりはシンプルになっているし、ちょっと機能も足しました。
+      <Box sx={{ margin: "0 10px 0" }}>
+        <Typography
+          variant="h4"
+          fontWeight="medium"
+          sx={{
+            marginTop: "50px",
+            fontFamily: `"M PLUS Rounded 1c", sans-serif`,
+          }}
+        >
+          概要
+        </Typography>
+        <Grid container spacing={3}>
+          <Grid item xs={6} sm={6} md={3}>
+            <img
+              src={img20221004_1}
+              alt="スマホのスクショ"
+              style={{ width: "100%", height: "auto" }}
+            ></img>
+          </Grid>
+          <Grid item xs={6} sm={6} md={3}>
+            <img
+              src={img20221004_2}
+              alt="スマホのスクショ"
+              style={{ width: "100%", height: "auto" }}
+            ></img>
+          </Grid>
+        </Grid>
+        画面を小さくしてデモしてみるとわかりやすいと思います。
+        <Typography
+          variant="h4"
+          fontWeight="medium"
+          sx={{
+            marginTop: "50px",
+            fontFamily: `"M PLUS Rounded 1c", sans-serif`,
+          }}
+        >
+          機能の詳細
+        </Typography>
+        <List>
+          <ListItem>
+            ・画面の横幅が600px以下のときにメニューを隠して出てくる
+          </ListItem>
+          <ListItem>
+            ・クリックorタップするとメニューが出てきて、それ以外の部分は暗くなる
+          </ListItem>
+          <ListItem>
+            ・暗いところか、いずれかのコンテンツをクリックorタップすると元に戻る
+          </ListItem>
+        </List>
+        <Typography
+          variant="h4"
+          fontWeight="medium"
+          sx={{
+            marginTop: "50px",
+            fontFamily: `"M PLUS Rounded 1c", sans-serif`,
+          }}
+        >
+          機能実装の仕組み
+        </Typography>
+        ざっと書きます。詳しくはコード参照
+        <Box sx={{ marginLeft: "10px" }}>
+          1.{" "}
+          <span
+            onClick={linkUseMedia}
+            style={{ textDecoration: "underline", cursor: "pointer" }}
+          >
             useMedia
           </span>
           を用いて画面が600px以上あるか否かを取得し、メニューとハンバーガーボタンの表示を切り替える。
-        </li>
-        <li>
+          <br />
+          2.
           ハンバーガーをクリックするきっかけでサブメニューのCSS切り替えとオーバーレイ(画面が暗くなる部分)表示
-        </li>
-        <li>メニューコンテンツのクリックかオーバーレイのクリックで元に戻る</li>
-      </ul>
-      <h2>実装</h2>
-      <h3>
-        <span className="link" onClick={linkUseMedia}>
-          useMedia
-        </span>
-        を用いて画面が600px以上あるか否かを取得し、メニューとハンバーガーボタンの表示を切り替える。
-      </h3>
-      <p>Header.tsx</p>
-      <pre>
-        <code className="language-js">{tsCode1}</code>
-      </pre>
-      <h3>
-        ハンバーガーをクリックするきっかけでサブメニューのCSS切り替えとオーバーレイ(画面が暗くなる部分)表示
-        and 非表示
-      </h3>
-      <p>Header.tsx</p>
-      <pre>
-        <code className="language-js">{tsCode2}</code>
-      </pre>
-      <p>Modal.tsx</p>
-      <pre>
-        <code className="language-js">{tsCode3}</code>
-      </pre>
-      <h2>感想</h2>
-      <p>
+          <br />
+          3. メニューコンテンツのクリックかオーバーレイのクリックで元に戻る
+        </Box>
+        <Typography
+          variant="h4"
+          fontWeight="medium"
+          sx={{
+            marginTop: "50px",
+            fontFamily: `"M PLUS Rounded 1c", sans-serif`,
+          }}
+        >
+          実装
+        </Typography>
+        <Box sx={{ marginLeft: "10px" }}>
+          1.{" "}
+          <span
+            onClick={linkUseMedia}
+            style={{ textDecoration: "underline", cursor: "pointer" }}
+          >
+            useMedia
+          </span>
+          を用いて画面が600px以上あるか否かを取得し、メニューとハンバーガーボタンの表示を切り替える。
+          <br />
+          Header.tsx
+          <SyntaxHighLighter code={tsCode1} language="js" />
+          2.{" "}
+          ハンバーガーをクリックするきっかけでサブメニューのCSS切り替えとオーバーレイ(画面が暗くなる部分)表示
+          and 非表示
+          <br />
+          Header.tsx
+          <SyntaxHighLighter code={tsCode2} language="js" />
+          Modal.tsx
+          <SyntaxHighLighter code={tsCode3} language="js" />
+        </Box>
+        <Typography
+          variant="h4"
+          fontWeight="medium"
+          sx={{
+            marginTop: "50px",
+            fontFamily: `"M PLUS Rounded 1c", sans-serif`,
+          }}
+        >
+          感想
+        </Typography>
         materialUIやその他のライブラリを使うことでだいぶスッキリかけたと思います。useStateなどの使い方も実感できました。しかし大変🙃
-      </p>
-    </main>
+      </Box>
+    </Box>
   );
 };
 
