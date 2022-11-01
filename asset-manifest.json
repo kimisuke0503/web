@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.bf01f5bc.css",
-    "main.js": "/web/static/js/main.04f7a153.js",
-    "static/media/screenshot20220909.png": "/web/static/media/screenshot20220909.78dd772438ed64b4d2dc.png",
-    "static/media/kimi.png": "/web/static/media/kimi.4bda368dcf50442cc21c.png",
+    "main.css": "/web/static/css/main.f803ac7e.css",
+    "main.js": "/web/static/js/main.ec45ed1b.js",
     "static/media/img20221004_1.png": "/web/static/media/img20221004_1.fe75368bbe85b1277232.png",
     "static/media/20220910_1.png": "/web/static/media/20220910_1.10afd18b351f3254607b.png",
     "static/media/endev.png": "/web/static/media/endev.4e8b0617045772d27726.png",
-    "static/media/headbg.JPG": "/web/static/media/headbg.0acf9c9b95146e87e04e.JPG",
+    "static/media/headbg.png": "/web/static/media/headbg.0acf9c9b95146e87e04e.png",
     "static/media/20220910_2.png": "/web/static/media/20220910_2.d0f2494660ec3ba47432.png",
     "static/media/img20221004_2.png": "/web/static/media/img20221004_2.1211ef811152fed4a323.png",
     "static/media/pc.png": "/web/static/media/pc.d3f569d0f4a1d54e0b2f.png",
     "static/media/react.png": "/web/static/media/react.1df635ad713b3a88afbe.png",
     "static/media/hamberger.png": "/web/static/media/hamberger.9554e0715b7f553fac6a.png",
     "static/media/hamberger2.png": "/web/static/media/hamberger2.e4d41351198af818957b.png",
+    "static/media/kimi.png": "/web/static/media/kimi.b5a391720352a84e36a2.png",
     "static/media/pc2.png": "/web/static/media/pc2.cf4eb7e2aeb9932049af.png",
     "static/media/css.png": "/web/static/media/css.55a83d19c7b3ee3b7fd3.png",
-    "static/media/addfunction.png": "/web/static/media/addfunction.3f205a9563522362c98f.png",
+    "static/media/pcUser.png": "/web/static/media/pcUser.3f205a9563522362c98f.png",
     "index.html": "/web/index.html",
-    "main.bf01f5bc.css.map": "/web/static/css/main.bf01f5bc.css.map",
-    "main.04f7a153.js.map": "/web/static/js/main.04f7a153.js.map"
+    "main.f803ac7e.css.map": "/web/static/css/main.f803ac7e.css.map",
+    "main.ec45ed1b.js.map": "/web/static/js/main.ec45ed1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf01f5bc.css",
-    "static/js/main.04f7a153.js"
+    "static/css/main.f803ac7e.css",
+    "static/js/main.ec45ed1b.js"
   ]
 }
