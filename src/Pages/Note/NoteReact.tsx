@@ -44,7 +44,8 @@ const NoteReact = () => {
       <Box>
         リンク集：
         <AnchorLink href="#props">props</AnchorLink>,{" "}
-        <AnchorLink href="#useState">useState</AnchorLink>
+        <AnchorLink href="#useState">useState</AnchorLink>,{" "}
+        <AnchorLink href="#mui-breakpoint">MUI -ブレイクポイント-</AnchorLink>
       </Box>
       <Box sx={{ margin: "0 10px 0" }}>
         <Typography
@@ -128,6 +129,25 @@ const NoteReact = () => {
           その制御をpropsで受け取り、イベントを定義(例ではshowがtrueならdiv要素を返す、というイベント)
         </p>
         <SyntaxHighLighter code={reactCode2} language="js" />
+        <Typography
+          id="mui-breakpoint"
+          variant="h4"
+          fontWeight="medium"
+          sx={{
+            marginTop: "20px",
+            fontFamily: `"M PLUS Rounded 1c", sans-serif`,
+          }}
+        >
+          MUI -ブレイクポイント-
+        </Typography>
+        muiのGridコンポーネントのpropsに渡すnumber。画面の広さに応じてGridアイテムの大きさを変えられる。最大12のうちの割合を指定する(3だと広さの1/4)
+        <List>
+          <ListItem>・xs: 0px~</ListItem>
+          <ListItem>・sm: 600px~</ListItem>
+          <ListItem>・md: 900px~</ListItem>
+          <ListItem>・lg: 1200px~</ListItem>
+          <ListItem>・xl: 1536px~</ListItem>
+        </List>
       </Box>
     </Box>
   );
