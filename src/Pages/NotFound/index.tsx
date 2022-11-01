@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <Box textAlign="center" sx={{ padding: "0 50px 0" }}>
       <Typography
-        variant="h2"
+        variant="h1"
         color="primary"
         fontWeight="medium"
         sx={{ fontFamily: `"M PLUS Rounded 1c", sans-serif` }}

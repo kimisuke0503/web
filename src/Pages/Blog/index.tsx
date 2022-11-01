@@ -1,45 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// イメージ
 import pcUserImg from "../../assets/images/blog/pc.png";
 import pcUserImg2 from "../../assets/images/blog/pc2.png";
 
-import { motion } from "framer-motion";
+import { Typography, Grid } from "@mui/material";
+import ArticleItem from "../../components/ArticleItem/ArticleItem";
 
 const BlogHome = () => {
   return (
-    <main className="blog">
-      <h1>Blog</h1>
-      <div className="wrapper grid">
-        <Link to="/web/blog/20221004">
-          <motion.button
-            className="item"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <p>
-              Typescript&Reactで作り直しました。
-              <br />
-              2022/10/04
-            </p>
-            <img src={pcUserImg2} alt="pcUserImg"></img>
-          </motion.button>
-        </Link>
-        <Link to="/web/blog/20220908">
-          <motion.button
-            className="item"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <p>
-              個人サイトを作りました。
-              <br />
-              2022/09/08
-            </p>
-            <img src={pcUserImg} alt="pcUserImg"></img>
-          </motion.button>
-        </Link>
-      </div>
-    </main>
+    <>
+      <Typography
+        variant="h1"
+        color="primary"
+        fontWeight="medium"
+        textAlign="center"
+        sx={{
+          fontFamily: `"M PLUS Rounded 1c", sans-serif`,
+          marginTop: "20px",
+        }}
+      >
+        Blog
+      </Typography>
+      <Grid container spacing={4} p={5}>
+        <ArticleItem
+          linkTo="/web/blog/20221004"
+          imgSrc={pcUserImg2}
+          title="Typescript&Reactで作り直しました。"
+          date="2022/10/04"
+        />
+        <ArticleItem
+          linkTo="/web/blog/20220908"
+          imgSrc={pcUserImg}
+          title="個人サイトを作りました。"
+          date="2022/09/08"
+        />
+      </Grid>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Grid
       container
-      sx={{ justifyContent: "space-between", padding: "20px 5% 0" }}
+      sx={{ justifyContent: "space-between", padding: "15px 5% 30px" }}
     >
       <Grid item>Kimisuke Web</Grid>
       <Grid item>&copy; 2022, Kimisuke</Grid>

@@ -21,7 +21,6 @@ const AuthLayout = () => {
         sx={{
           width: "95%",
           margin: "-40px auto 20px",
-          padding: "10px",
           borderRadius: "10px",
         }}
       >
