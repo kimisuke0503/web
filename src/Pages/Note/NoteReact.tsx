@@ -25,7 +25,7 @@ const reactCode3 = `
 import type { ReactNode } from 'react';
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
 };`.trim();
 
 const NoteReact = () => {
