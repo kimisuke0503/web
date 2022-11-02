@@ -1,12 +1,8 @@
 import React from "react";
 
-const Modal = (props: { show: boolean; setShow: (show: boolean) => void }) => {
-  const toggleModal = () => {
-    props.setShow(!props.show);
-  };
-
+const Modal = (props: { show: boolean; toggleModal: () => void }) => {
   return props.show ? (
-    <div className="overlay" onClick={toggleModal}></div>
+    <div className="overlay" onClick={props.toggleModal}></div>
   ) : null;
 };
 

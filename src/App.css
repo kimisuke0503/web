@@ -12,7 +12,7 @@
 
 /* ヘッダー */
 header {
-    z-index: 99;
+   z-index: 97;
     position: fixed;
     width: 90%;
     height: 60px;
@@ -39,6 +39,7 @@ header.hidden {
 }
 
 .sub-menu {
+    z-index: 99;
     position: fixed; /* 位置を固定 */
     top: 0;
     right: -80%; /* ボタンが押されるまで隠す(position: fixed;との連携) */
@@ -56,7 +57,7 @@ header.hidden {
     right: 0; /* ボタンが押されると位置を変えて出てくるようにする */
 }
 .overlay{ /*　画面全体を覆う設定　*/
-    z-index: -1;
+    z-index: 98;
     position:fixed;
     top:0;
     left:0;

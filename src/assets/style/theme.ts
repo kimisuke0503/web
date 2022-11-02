@@ -7,8 +7,7 @@ const pageTheme = responsiveFontSizes(
         main: "#b07f72",
       },
       secondary: {
-        main: "#8490C8",
-        contrastText: "FFFFFF",
+        main: "#432",
       },
     },
     typography: {
