@@ -4,7 +4,7 @@ import { useMedia } from "react-use";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 import IconButton from "@mui/material/IconButton";
-import { Stack } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
@@ -34,12 +34,33 @@ const Header = (props: { show: boolean; toggleModal: () => void }) => {
   const isWide = useMedia("(min-width: 600px)");
 
   return (
-    <header className={showHeader ? "" : "hidden"}>
-      <Link to="/web" className="logo">
-        Kimisuke Web
-      </Link>
+    <Grid
+      container
+      zIndex="97"
+      position="fixed"
+      width="90%"
+      margin="2% 5% 0"
+      height="60px"
+      borderRadius="20px"
+      justifyContent="space-between"
+      alignItems="center"
+      padding="0 5%"
+      boxShadow="0px 5px 10px rgba(0,0,0,0.3)"
+      sx={{
+        backgroundColor: "#fff",
+        transition: "ease .4s",
+        transform: showHeader ? "" : "translate(0, -100%)",
+      }}
+    >
+      <Grid item>
+        <Link to="/web">
+          <Typography fontSize={18} fontWeight={700}>
+            Kimisuke Web
+          </Typography>
+        </Link>
+      </Grid>
       {isWide ? (
-        <div className="main-menu">
+        <Grid item>
           <Stack direction="row" spacing={2}>
             <MenuButton
               icon={<AccountBoxIcon />}
@@ -57,13 +78,15 @@ const Header = (props: { show: boolean; toggleModal: () => void }) => {
               text="BLOG"
             />
           </Stack>
-        </div>
+        </Grid>
       ) : (
-        <IconButton color="primary" onClick={props.toggleModal}>
-          <MenuIcon />
-        </IconButton>
+        <Grid item>
+          <IconButton onClick={props.toggleModal}>
+            <MenuIcon />
+          </IconButton>
+        </Grid>
       )}
-    </header>
+    </Grid>
   );
 };
 

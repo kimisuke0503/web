@@ -32,6 +32,7 @@ const AuthLayout = () => {
           width: "95%",
           margin: "-40px auto 20px",
           borderRadius: "10px",
+          padding: "0 2%",
         }}
       >
         <Outlet />

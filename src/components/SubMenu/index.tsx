@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
@@ -9,7 +9,19 @@ import MenuButton from "../MenuButton";
 
 const SubMenu = (props: { show: boolean; toggleModal: () => void }) => {
   return (
-    <div className={`sub-menu ${props.show ? "active" : ""}`}>
+    <Box
+      pt={3}
+      pl={2}
+      sx={{
+        zIndex: "99",
+        position: "fixed",
+        right: props.show ? "0" : "-60%",
+        width: "60%",
+        height: "100vh",
+        background: "rgba(255,255,255,.9)",
+        transition: "ease 0.4s",
+      }}
+    >
       <Stack
         spacing={2}
         alignItems={"flex-start"}
@@ -34,7 +46,7 @@ const SubMenu = (props: { show: boolean; toggleModal: () => void }) => {
           clickHandler={props.toggleModal}
         />
       </Stack>
-    </div>
+    </Box>
   );
 };
 
