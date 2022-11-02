@@ -4,7 +4,7 @@ import { useMedia } from "react-use";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 import IconButton from "@mui/material/IconButton";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
