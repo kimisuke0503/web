@@ -39,7 +39,7 @@ const Header = (props: { show: boolean; toggleModal: () => void }) => {
       zIndex="97"
       position="fixed"
       width="90%"
-      margin="2% 5% 0"
+      margin="15px 5% 0"
       height="60px"
       borderRadius="20px"
       justifyContent="space-between"

@@ -20,7 +20,7 @@ const NoteFunctionHome = () => {
       >
         Note
       </Typography>
-      <Grid container spacing={4} p={5}>
+      <Grid container justifyContent="center" p={3} spacing={4}>
         <ArticleItem
           linkTo="/web/note/function/hamberger2"
           imgSrc={hambergerImg2}

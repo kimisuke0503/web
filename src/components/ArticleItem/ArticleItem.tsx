@@ -10,7 +10,13 @@ const ArticleItem = (props: {
   date: string;
 }) => {
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid
+      item
+      xs={12}
+      sm={6}
+      md={4}
+      sx={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+    >
       <Link to={props.linkTo}>
         <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
           <Paper elevation={5} sx={{ borderRadius: "5%", padding: "5%" }}>
