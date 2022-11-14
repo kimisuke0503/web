@@ -13,13 +13,13 @@ import {
   ListItem,
 } from "@mui/material";
 
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
+// import InstagramIcon from "@mui/icons-material/Instagram";
+// import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 import {
-  linkInstagram,
-  linkTwitter,
+  // linkInstagram,
+  // linkTwitter,
   linkGithub,
 } from "../../components/ExternalLinks";
 
