@@ -40,12 +40,14 @@ const Profile = () => {
           }}
         />
         <Typography
-          variant="h1"
+          variant="h2"
           color="primary"
           fontWeight="medium"
           sx={{ fontFamily: `"M PLUS Rounded 1c", sans-serif` }}
         >
           Kimisuke
+          <br />
+          (Kenryu Mouri)
         </Typography>
         <Typography
           fontWeight="medium"
@@ -57,17 +59,17 @@ const Profile = () => {
         >
           Graduate Student
         </Typography>
-        <IconButton onClick={linkInstagram}>
+        {/* <IconButton onClick={linkInstagram}>
           <InstagramIcon />
         </IconButton>
         <IconButton onClick={linkTwitter}>
           <TwitterIcon />
-        </IconButton>
+        </IconButton> */}
         <IconButton onClick={linkGithub}>
           <GitHubIcon />
         </IconButton>
         <Typography my={2}>
-          kimisukeです(愛猫の名前を拝借しました)。大学院生です。猫と映画と伊坂幸太郎が好きです。
+          猫と映画と伊坂幸太郎が好きです。
           <br />
           web制作系ノートとか趣味のこととかをまとめるサイトを作ってみました。
           <br />
@@ -121,7 +123,7 @@ const Profile = () => {
           Interest
         </Typography>
         <Typography my={2}>
-          Javascript/Typescript/React/猫/伊坂幸太郎/映画/就活
+          Javascript/Typescript/React/猫/伊坂幸太郎/映画
         </Typography>
         <Typography variant="h3" sx={{ marginTop: "70px" }}>
           Academic Paper
