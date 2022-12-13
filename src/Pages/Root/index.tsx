@@ -132,10 +132,10 @@ const Profile = () => {
           <ListItem>
             Seiki Ubukata, Kenryu Mouri and Katsuhiro Honda, &quot;Basic
             Consideration of Collaborative Filtering Based on Rough
-            Co-clustering Induced by Multinomial Mixture Models &quot; in
-            International Conference on Soft Computing and Intelligent Systems
-            and 23rd International Symposium on Advanced Intelligent Systems
-            (SCIS&ISIS), Dec. 2022.
+            Co-clustering Induced by Multinomial Mixture Models &quot; Proc. of
+            Joint 12th International Conference on Soft Computing and
+            Intelligent Systems and 23rd International Symposium on Advanced
+            Intelligent Systems, #F-2-C-1 (2022)
           </ListItem>
         </List>
 
