@@ -45,9 +45,7 @@ const Profile = () => {
           fontWeight="medium"
           sx={{ fontFamily: `"M PLUS Rounded 1c", sans-serif` }}
         >
-          Kimisuke
-          <br />
-          (Kenryu Mouri)
+          Kenryu Mouri
         </Typography>
         <Typography
           fontWeight="medium"

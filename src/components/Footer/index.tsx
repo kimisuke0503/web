@@ -7,8 +7,8 @@ const Footer = () => {
       container
       sx={{ justifyContent: "space-between", padding: "15px 5% 30px" }}
     >
-      <Grid item>Kimisuke Web</Grid>
-      <Grid item>&copy; 2022, Kimisuke</Grid>
+      <Grid item>Moriken Web</Grid>
+      <Grid item>&copy; 2022, Kenryu Mouri</Grid>
     </Grid>
   );
 };

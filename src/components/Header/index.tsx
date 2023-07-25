@@ -55,7 +55,7 @@ const Header = (props: { show: boolean; toggleModal: () => void }) => {
       <Grid item>
         <Link to="/web">
           <Typography fontSize={18} fontWeight={700}>
-            Kimisuke Web
+            Moriken Web
           </Typography>
         </Link>
       </Grid>
